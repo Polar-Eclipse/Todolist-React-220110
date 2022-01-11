@@ -7,7 +7,7 @@ export default class Item extends Component {
     return (
       <li>
         <label>
-          <input type="checkbox"  defaultChecked={done}/>
+          <input type="checkbox"  defaultChecked={true}/>
           <span>{name}</span>
         </label>
         <button className="btn btn-danger" style={{ display: "none" }}>

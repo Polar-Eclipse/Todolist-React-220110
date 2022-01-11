@@ -16,25 +16,12 @@ export default class App extends Component {
 
     ]
   }
-
-  // set a function that Header can send data to App
-  // addTodo is used to add a todo. and the received parameter os todo Obj
-  addTodo=(todoObj)=>{
-    //get original todos
-    const{todos}=this.state;
-    // add one more todo
-    const newTodos=[todoObj,...todos]
-    //refresh state
-    this.setState({todos:newTodos})
-
-  }
-
   render() {
     const{todos}=this.state
     return (
       <div className="todo-container">
       <div className="todo-wrap">
-        <Header addTodo={this.addTodo} />
+        <Header />
         <List todos={todos}/>
         <Footer />
       </div>

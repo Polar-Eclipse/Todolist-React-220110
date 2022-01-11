@@ -21,6 +21,7 @@ export default class Header extends Component {
     const todoObj={id:nanoid(),name:target.value,done:false}
     // pass the todoObj to App
     this.props.addTodo(todoObj)
+    console.log(this)
     target.value='';
 
 

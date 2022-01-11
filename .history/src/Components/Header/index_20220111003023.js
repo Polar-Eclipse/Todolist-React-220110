@@ -5,7 +5,6 @@ import "./index.css";
 //console.log(nanoid());
 
 export default class Header extends Component {
-
   handleKeyUp=(event)=>{
     // de-construct event and get value of keyCode and target
     const{keyCode,target}=event

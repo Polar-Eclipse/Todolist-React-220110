@@ -17,7 +17,6 @@ export default class App extends Component {
     ]
   }
 
-  // set a function that Header can send data to App
   // addTodo is used to add a todo. and the received parameter os todo Obj
   addTodo=(todoObj)=>{
     //get original todos
