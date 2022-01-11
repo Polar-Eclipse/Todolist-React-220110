@@ -15,9 +15,8 @@ export default class Item extends Component {
 
   render() {
     const { name, done } = this.props;
-    const{mouse}=this.state;
     return (
-      <li style={{backgroundColor:mouse?'#ddd':'white'}}
+      <li style={{backgroundColor:this.state.mouse?'#ddd':'white'}}
         onMouseEnter={this.handleMouse(true)}
         onMouseLeave={this.handleMouse(false)}
       >
@@ -25,7 +24,7 @@ export default class Item extends Component {
           <input type="checkbox" defaultChecked={done} />
           <span>{name}</span>
         </label>
-        <button className="btn btn-danger" style={{ display:mouse?'block': 'none' }}>
+        <button className="btn btn-danger" style={{ display: "none" }}>
           delete
         </button>
       </li>
