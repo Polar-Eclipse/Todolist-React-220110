@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "./index.css";
 
 export default class Item extends Component {
@@ -24,8 +23,7 @@ export default class Item extends Component {
 
   //callback function for deleting a todo, the function is not curring
   handleDelete=(id)=>{
-    if(window.confirm('Are you sure to delete it?')){
-      console.log('notice App delete',id );
+    if(confirm('Are you sure to delete it?')){
       this.props.deleteTodo(id)
     }
  

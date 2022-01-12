@@ -57,7 +57,7 @@ export default class App extends Component {
 
 
   render() {
-    const{todos}=this.state
+    const{todos,updateTodo,deleteTodo}=this.state
     return (
       <div className="todo-container">
       <div className="todo-wrap">

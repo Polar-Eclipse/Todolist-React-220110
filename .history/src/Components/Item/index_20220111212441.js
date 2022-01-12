@@ -26,7 +26,7 @@ export default class Item extends Component {
   handleDelete=(id)=>{
     if(window.confirm('Are you sure to delete it?')){
       console.log('notice App delete',id );
-      this.props.deleteTodo(id)
+      //this.props.deleteTodo(id)
     }
  
   }

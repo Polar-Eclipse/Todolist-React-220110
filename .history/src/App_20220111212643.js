@@ -62,7 +62,7 @@ export default class App extends Component {
       <div className="todo-container">
       <div className="todo-wrap">
         <Header addTodo={this.addTodo}  />
-        <List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo}/>
+        <List todos={todos} updateTodo={this.updateTodo}/>
         <Footer />
       </div>
     </div>
