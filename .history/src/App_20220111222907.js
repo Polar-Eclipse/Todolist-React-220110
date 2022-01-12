@@ -54,35 +54,17 @@ export default class App extends Component {
     this.setState({todos:newTodos})
   }
 
-    //  checkAll is used to checkAll
-    checkAllTodo=(done)=>{
+    //  checkAll
+    checkAllTodo=()=>{
       // get previous todos
       const{todos}=this.state
       //process data
-      const newTodos=todos.map((todoObj)=>{
-        return {...todoObj, done:done}
+      todos.map((todoObj)=>{
+        return {...todoObj, done:true}
 
       })
-      
-      //update state
-      this.setState({todos:newTodos})
 
     }
-
-
-    //clear all finished tasks
-    clearAllDone=()=>{
-      // get previous todos
-      const{todos}=this.state
-      // filter data
-      const newTodos=todos.filter((todoObj)=>{
-        return todoObj.done===false
-        //or !todoObk.done
-      })
-
-      //update state
-      this.setState({todos:newTodos})
-      }
 
 
   render() {
@@ -92,7 +74,7 @@ export default class App extends Component {
       <div className="todo-wrap">
         <Header addTodo={this.addTodo}  />
         <List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo}/>
-        <Footer todos={todos} checkAllTodo={this.checkAllTodo} clearAllDone={this.clearAllDone} />
+        <Footer todos={todos} />
       </div>
     </div>
     )

@@ -70,21 +70,6 @@ export default class App extends Component {
     }
 
 
-    //clear all finished tasks
-    clearAllDone=()=>{
-      // get previous todos
-      const{todos}=this.state
-      // filter data
-      const newTodos=todos.filter((todoObj)=>{
-        return todoObj.done===false
-        //or !todoObk.done
-      })
-
-      //update state
-      this.setState({todos:newTodos})
-      }
-
-
   render() {
     const{todos}=this.state
     return (
@@ -92,7 +77,7 @@ export default class App extends Component {
       <div className="todo-wrap">
         <Header addTodo={this.addTodo}  />
         <List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo}/>
-        <Footer todos={todos} checkAllTodo={this.checkAllTodo} clearAllDone={this.clearAllDone} />
+        <Footer todos={todos} checkAllTodo={this.checkAllTodo} />
       </div>
     </div>
     )

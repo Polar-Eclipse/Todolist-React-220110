@@ -2,16 +2,8 @@ import "./index.css";
 import React, { Component } from "react";
 
 export default class Footer extends Component {
-
-  //Callback function for check all
-  handleCheckAll=(event)=>{
-    this.props.checkAllTodo(event.target.checked)
-
-  }
-
-  //callback function for clearing all finished tasks
-  handleClearAllDone=()=>{
-    this.props.clearAllDone()
+  handleCheckAll=()=>{
+    this.props.checkAllTodo()
 
   }
 
@@ -30,12 +22,12 @@ export default class Footer extends Component {
     return (
       <div className="todo-footer">
         <label>
-          <input type="checkbox" Checked={doneCount===total && total !==0 ?true:false} onChange={this.handleCheckAll}/>
+          <input type="checkbox" Checked={doneCount===total ?true:false} onChange={this.handleCheckAll}/>
         </label>
         <span>
           <span>finished {doneCount}</span> / All{total}
         </span>
-        <button onClick={this.handleClearAllDone} className="btn btn-danger">delete finished tasks</button>
+        <button className="btn btn-danger">delete finished tasks</button>
       </div>
     );
   }

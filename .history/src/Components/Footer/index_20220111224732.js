@@ -9,12 +9,6 @@ export default class Footer extends Component {
 
   }
 
-  //callback function for clearing all finished tasks
-  handleClearAllDone=()=>{
-    this.props.clearAllDone()
-
-  }
-
   render() {
     const {todos}=this.props
     // The amount of done
@@ -35,7 +29,7 @@ export default class Footer extends Component {
         <span>
           <span>finished {doneCount}</span> / All{total}
         </span>
-        <button onClick={this.handleClearAllDone} className="btn btn-danger">delete finished tasks</button>
+        <button onClick={this.handleClearAll} className="btn btn-danger">delete finished tasks</button>
       </div>
     );
   }
